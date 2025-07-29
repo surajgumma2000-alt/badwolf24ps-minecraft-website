@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@400&family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Minecraft theme colors */
+  --minecraft-green: hsl(100, 52%, 44%);
+  --minecraft-dark-green: hsl(100, 65%, 16%);
+  --minecraft-bright-green: hsl(100, 56%, 51%);
+  --minecraft-gray: hsl(0, 0%, 10%);
+  --minecraft-dark: hsl(0, 0%, 6%);
+  --server-online: hsl(120, 100%, 58%);
+  --server-offline: hsl(0, 100%, 58%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-color: var(--minecraft-dark);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+@layer components {
+  .font-minecraft {
+    font-family: 'Press Start 2P', monospace;
+  }
+  
+  .font-gaming {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+  
+  .minecraft-button {
+    background: linear-gradient(to bottom, var(--minecraft-bright-green), var(--minecraft-green));
+    border: 2px solid var(--minecraft-dark-green);
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 0 var(--minecraft-dark-green);
+  }
+  
+  .minecraft-button:hover {
+    background: linear-gradient(to bottom, hsl(100, 60%, 55%), var(--minecraft-bright-green));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--minecraft-dark-green);
+  }
+  
+  .minecraft-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 0 var(--minecraft-dark-green);
+  }
+  
+  .minecraft-card {
+    background-color: var(--minecraft-gray);
+    border: 2px solid var(--minecraft-green);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 0 var(--minecraft-dark-green);
+  }
+  
+  .connection-info {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--minecraft-green);
+  }
+  
+  .server-status-online {
+    animation: pulse-green 2s infinite;
+  }
+  
+  @keyframes pulse-green {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  .star-rating {
+    font-size: 2rem;
+    color: #444;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .star-rating:hover,
+  .star-rating.active {
+    color: #FFD700;
+  }
+}
