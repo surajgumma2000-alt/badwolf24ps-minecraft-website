@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack web application for a Minecraft server called BadWolf24PS. The application provides server information, allows users to submit feedback, and displays recent community feedback. It's built with a modern tech stack including React, TypeScript, Express.js, and uses Drizzle ORM with PostgreSQL for data persistence.
+This is a full-stack web application for a Minecraft server called BadWolf24PS. The application provides server information, allows users to submit feedback, displays recent community feedback, and includes a Discord community section. It's built with a modern tech stack including React, TypeScript, Express.js, and uses Drizzle ORM with PostgreSQL for data persistence.
 
 ## User Preferences
 
@@ -98,3 +98,12 @@ The application is configured for a monorepo deployment:
 - `tailwind.config.ts`: Tailwind CSS configuration
 
 The application emphasizes type safety with shared schemas between client and server, uses modern React patterns with hooks and context, and implements a clean separation of concerns with distinct layers for API, business logic, and data access.
+
+## Recent Changes
+
+### January 29, 2025
+- Added Discord community section with invite link (https://discord.gg/Cbvrq283)
+- Integrated Discord branding with SiDiscord icons from react-icons/si
+- Enhanced footer with Discord community link
+- Server displays real-time information for IP: ip-badwolf24ps.aternos:57180
+- Server operates daily from 8 AM to 12 PM as specified

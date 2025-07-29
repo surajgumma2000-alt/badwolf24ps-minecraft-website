@@ -1,7 +1,8 @@
 import { ServerInfo } from "@/components/server-info";
 import { FeedbackForm } from "@/components/feedback-form";
 import { RecentFeedback } from "@/components/recent-feedback";
-import { Box, Clock, Star, MessageSquare } from "lucide-react";
+import { Box, Clock, Star, MessageSquare, Users } from "lucide-react";
+import { SiDiscord } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -87,6 +88,65 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Discord Community */}
+        <section className="mb-8">
+          <div className="minecraft-card p-6">
+            <h2 className="font-minecraft text-[var(--minecraft-bright-green)] text-lg mb-6 flex items-center">
+              <Users className="mr-3" />
+              Join Our Community
+            </h2>
+            
+            <div className="bg-[var(--minecraft-dark)] p-6 rounded-lg border border-[var(--minecraft-green)]">
+              <div className="text-center mb-6">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-[#5865F2] rounded-full flex items-center justify-center">
+                    <SiDiscord className="text-white text-3xl" />
+                  </div>
+                </div>
+                <h3 className="font-gaming text-[var(--minecraft-bright-green)] text-xl mb-2">
+                  Discord Server
+                </h3>
+                <p className="text-gray-400 font-gaming mb-6">
+                  Connect with other players, get server updates, and chat with the community!
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="text-center p-4 bg-[var(--minecraft-gray)] rounded-lg border border-[var(--minecraft-green)]">
+                  <div className="text-blue-400 text-2xl mb-2">💬</div>
+                  <div className="font-gaming text-[var(--minecraft-bright-green)]">Chat & Voice</div>
+                  <div className="text-sm text-gray-400">Talk with players</div>
+                </div>
+                <div className="text-center p-4 bg-[var(--minecraft-gray)] rounded-lg border border-[var(--minecraft-green)]">
+                  <div className="text-green-400 text-2xl mb-2">📢</div>
+                  <div className="font-gaming text-white">Server Updates</div>
+                  <div className="text-sm text-gray-400">Latest news & events</div>
+                </div>
+                <div className="text-center p-4 bg-[var(--minecraft-gray)] rounded-lg border border-[var(--minecraft-green)]">
+                  <div className="text-yellow-400 text-2xl mb-2">🎮</div>
+                  <div className="font-gaming text-[var(--minecraft-bright-green)]">Game Help</div>
+                  <div className="text-sm text-gray-400">Tips & support</div>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <a 
+                  href="https://discord.gg/Cbvrq283" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="minecraft-button inline-flex items-center px-8 py-4 text-white font-gaming text-lg"
+                >
+                  <SiDiscord className="w-5 h-5 mr-3" />
+                  Join Discord Server
+                </a>
+                <div className="mt-3 text-sm text-gray-400">
+                  Click to join our Discord community
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Feedback Form */}
         <section className="mb-8">
           <div className="minecraft-card p-6">
@@ -124,7 +184,7 @@ export default function Home() {
               <h4 className="font-gaming text-[var(--minecraft-bright-green)] mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="text-gray-400 hover:text-[var(--minecraft-bright-green)] transition-colors">Server Rules</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-[var(--minecraft-bright-green)] transition-colors">Discord Community</a></li>
+                <li><a href="https://discord.gg/Cbvrq283" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[var(--minecraft-bright-green)] transition-colors">Discord Community</a></li>
                 <li><a href="https://aternos.org" className="text-gray-400 hover:text-[var(--minecraft-bright-green)] transition-colors">Aternos Panel</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-[var(--minecraft-bright-green)] transition-colors">Ban Appeals</a></li>
               </ul>
